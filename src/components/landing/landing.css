@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+}
+
+
+.hero{
+    height: 100vh;
+    background: url('/img/mg1-hero.jpeg') center/cover;
+    color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0%;
+    font-family: 'Poppins', sans-serif; /* Usamos la fuente importada */
+}
+
+.parrafo{
+    color: aliceblue;
+}
+
+
+.logo{
+    margin-top: 10px;
+    width: 50px;
+    height: auto;
+}
+
+.divider {
+    width: 80%;
+    height: 2px;
+    background: orange;
+    margin: 40px auto;
+}
+
+
+.servicios{
+    margin-top: 30px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+
+    height: auto; /* Cambia height fijo por auto */
+    min-height: 100vh; /* Opcional, para que al menos ocupe la pantalla */
+    padding-bottom: 50px; /* Espacio extra al final para que no pegue al borde */
+    overflow: visible; /* Asegura que lo que salga se vea */
+}
+
+.caja-servicios{
+    margin-top: 20px;
+    background-color: orange;
+    border-radius: 20px;
+    width: 130px;
+    height: auto;
+    padding: 10px;
+    margin : 30px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caja-servicios:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo-servicios{
+    margin-top: 30px;
+    color: black;
+    font-family: 'Poppins', sans-serif; 
+}
+
+.servicios-1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px
+}
+
+/*TRABAJOS*/
+
+.caja-titulo-trabajos {
+    background-color: orange;
+    border-radius: 20px;
+    width: fit-content; /* Se ajusta al texto */
+    min-width: 140px;
+    padding: 10px 20px;
+    margin: 30px auto; /* Centrado automático */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caja-titulo-trabajos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-proyectos {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+}
+
+/* --- CONTENEDOR DE TRABAJOS (EL GRID) --- */
+.proyectos {
+    padding: 60px 15px; /* Menos padding en los costados para ganar espacio */
+    background: #f8f8f8;
+    overflow: visible;
+    height: auto;
+}
+
+.caja-trabajos {
+    display: grid;
+    /* En PC: Las imágenes tendrán un mínimo de 250px (aprox 3 o 4 columnas) */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/* --- CADA IMAGEN --- */
+.trabajo-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    /* En PC las fotos pueden ser un poco más rectangulares o cuadradas */
+    aspect-ratio: 16 / 9; 
+    width: 100%;
+    background-color: #eee;
+}
+
+.trabajo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.trabajo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- TEXTO SOBRE LA IMAGEN (OVERLAY) --- */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7); /* Un poco más oscuro para leer mejor */
+    color: white;
+    text-align: center;
+    padding: 8px;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 14px; /* Un poco más chico para que quepa en el cuadro */
+}
+
+.trabajo-item:hover .overlay {
+    opacity: 1;
+}
+
+/* AJUSTE PARA MÓVILES MUY PEQUEÑOS */
+@media (max-width: 768px) {
+    .caja-trabajos {
+        /* En Celular: Forzamos 2 columnas exactas */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .trabajo-item {
+        /* En Celular: Cuadrado perfecto para que entren 2 sin verse minúsculas */
+        aspect-ratio: 2 / 2 !important; 
+    }
+
+    .proyectos {
+        padding: 40px 10px;
+    }
+}
+
+
+/*NOSOTROS*/
+
+.caja-nosotros{
+  background-color: orange;
+  border-radius: 20px;
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  margin: 30px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: fit-content; /* Se ajusta al texto */
+}
+
+.caja-nosotros:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-nosotros{
+  width: 50px;
+  height: auto;
+  margin: 30px auto;
+  margin-bottom: 7px;
+}
+
+
+.sobre-nosotros {
+  margin-top: 30px;
+  padding: 20px 20px;
+  background: white;
+}
+
+.contenedor-nosotros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.texto-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.texto-nosotros h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.texto-nosotros p {
+  margin-bottom: 15px;
+  color: #555;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.imagen-nosotros {
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagen-nosotros img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* TÍTULO (cajita naranja) */
+  .caja-nosotros {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 20px auto;
+  }
+
+  /* SECCIÓN GENERAL */
+  .sobre-nosotros {
+    padding: 20px 15px;
+  }
+
+  /* GRID → 1 COLUMNA */
+  .contenedor-nosotros {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* TEXTO */
+  .texto-nosotros h2 {
+    font-size: 24px;
+  }
+
+  .texto-nosotros p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* IMAGEN */
+  .imagen-nosotros img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  /* LOGO */
+  .logo-nosotros {
+    width: 40px;
+    margin: 20px auto 5px;
+  }
+}
+
+
+/*FINAL */
+
+.btn-whatsapp {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #25D366;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+
+.cta-final {
+  background: url('/img/mg1-final.jpeg') center/cover;
+  color: orange;
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 0;
+}
+
+.cta-final h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.cta-final p {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.cta-final button {
+  background: #25D366;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.cta-final button:hover {
+  background: #1ebe5d;
+}
+
+
+.copyright {
+
+  margin-bottom: 0 !important;
+  padding-bottom: 10px; /* Ajusta a tu gusto */
+  color: black;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  
+}
+
+
+/*wasap*/
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  background: #25D366;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  text-decoration: none;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background: #1ebe5d;
+}
+
+/* EFECTO LATIDO (PRO) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+}

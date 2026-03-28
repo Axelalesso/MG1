@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.section-accordion{
+    color: black;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    overflow: visible;
+}
+
+.caja-accordion{
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.caja-2-accordion{
+    border-Bottom: 1px solid #ddd
+}
+
+.caja-header-accordion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer
+}
+
+.caja-accordion-content{
+    padding: 0 15px 15px 15px;
+    color: #555
+}

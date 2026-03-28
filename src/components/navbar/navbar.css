@@ -1,0 +1,81 @@
+/* Navbar.css */
+
+/* Importamos una fuente más moderna desde Google Fonts (opcional pero recomendado) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo izquierda, links centro, redes derecha */
+  align-items: center;
+  padding: 1rem 5%; /* Padding lateral generoso */
+  background-color: #111; /* Negro mate */
+  color: white;
+  font-family: 'Poppins', sans-serif; /* Usamos la fuente importada */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333; /* Sutil línea inferior */
+}
+
+/* 1. Estilos del Logo */
+.nav-logo .logo-img {
+  height: 40px; /* Ajusta la altura máxima del logo */
+  width: auto; /* Mantiene la proporción */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo a:hover .logo-img {
+  transform: scale(1.05); /* Sutil efecto al hacer hover en el logo */
+}
+
+/* 2. Estilos de los Enlaces de Navegación */
+.nav-items {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre los links de texto */
+  list-style: none;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: #c0c0c0; /* Gris plateado suave por defecto */
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Links en mayúsculas */
+  transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: white; /* Color al pasar el ratón */
+}
+
+/* 3. Estilos de los Iconos de Redes Sociales */
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Espacio entre los iconos */
+}
+
+.social-icon {
+  height: 22px; /* Tamaño de los iconos */
+  width: 22px;
+  display: block;
+  /* Si tus SVGs son negros, esto los volverá blancos/grisáceos */
+  filter: invert(80%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(90%) contrast(90%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.nav-social a:hover .social-icon {
+  transform: translateY(-2px); /* Pequeño salto al hacer hover */
+  /* Vuelve los iconos blancos al hacer hover */
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* Responsive sencillo (opcional) */
+@media (max-width: 768px) {
+  .nav-items {
+    display: none; /* Oculta los links de texto en móviles */
+  }
+}
