@@ -24,7 +24,7 @@ export default function Navbar() {
         <a href="https://www.instagram.com/constructora_mg1" target="_blank" rel="noopener noreferrer">
           <FaInstagram className="social-icon" />
         </a>
-        <a href="href=mailto:mauroagonzalez.mag@gmail.com?subject=Consulta%20web&body=Hola,%20quiero%20consultar..." target="_blank" rel="noopener noreferrer">
+        <a href="mailto:mauroagonzalez.mag@gmail.com?subject=Consulta%20web&body=Hola,%20quiero%20consultar..." target="_blank" rel="noopener noreferrer">
           <IoIosMail className="social-icon" />
         </a>
       </div>
