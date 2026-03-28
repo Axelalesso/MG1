@@ -6,6 +6,7 @@ body {
 
 
 .hero{
+  margin-top: 0%;
     width: 100%;
     min-height: 100vh; /* 🔥 clave */
     background: url('/img/mg1-hero.jpeg') center center;
@@ -117,9 +118,9 @@ body {
     /* En PC: Las imágenes tendrán un mínimo de 250px (aprox 3 o 4 columnas) */
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto 50px;
-    padding: 20px;
+    padding: 10px;
     justify-content: center;
 }
 
