@@ -6,15 +6,18 @@ body {
 
 
 .hero{
-    height: 100vh;
-    background: url('/img/mg1-hero.jpeg') center/cover;
+    width: 100%;
+    min-height: 100vh; /* 🔥 clave */
+    background: url('/img/mg1-hero.jpeg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 0%;
-    font-family: 'Poppins', sans-serif; /* Usamos la fuente importada */
+    font-family: 'Poppins', sans-serif;
 }
 
 .parrafo{
@@ -41,9 +44,7 @@ body {
     padding: 40px;
     text-align: center;
     color: white;
-
     height: auto; /* Cambia height fijo por auto */
-    min-height: 100vh; /* Opcional, para que al menos ocupe la pantalla */
     padding-bottom: 50px; /* Espacio extra al final para que no pegue al borde */
     overflow: visible; /* Asegura que lo que salga se vea */
 }
